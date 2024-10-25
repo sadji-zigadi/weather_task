@@ -7,7 +7,7 @@ class WeatherEntity extends Equatable {
   final String icon;
   final int statusCode;
 
-  WeatherEntity({
+  const WeatherEntity({
     required this.name,
     required this.temp,
     required this.description,
@@ -16,5 +16,6 @@ class WeatherEntity extends Equatable {
   });
 
   @override
-  List<Object> get props => [name, temp, description, icon, statusCode];
+  List<Object> get props =>
+      [name, temp, description, icon, statusCode];
 }

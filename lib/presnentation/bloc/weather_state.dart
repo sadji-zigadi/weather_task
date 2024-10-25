@@ -27,4 +27,3 @@ final class WeatherError extends WeatherState {
   @override
   List<Object> get props => [message];
 }
-

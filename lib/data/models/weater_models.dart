@@ -1,19 +1,13 @@
 import '../../domain/entities/weather.dart';
 
 class WeatherModel extends WeatherEntity {
-  WeatherModel({
-    required String name,
-    required double temp,
-    required String description,
-    required String icon,
-    required int statusCode,
-  }) : super(
-          name: name,
-          temp: temp,
-          description: description,
-          icon: icon,
-          statusCode: statusCode,
-        );
+  const WeatherModel({
+    required super.name,
+    required super.temp,
+    required super.description,
+    required super.icon,
+    required super.statusCode,
+  });
 
   factory WeatherModel.fromJson(Map<String, dynamic> json) {
     return WeatherModel(
