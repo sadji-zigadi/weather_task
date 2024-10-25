@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:weather_application_task/core/error/failure.dart';
-
 import '../entities/weather.dart';
 import '../repository/weather_repository.dart';
 

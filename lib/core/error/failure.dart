@@ -1,12 +1,12 @@
 import 'package:equatable/equatable.dart';
 
 abstract class WeatherFailure extends Equatable {
-  final String Message;
+  final String message;
 
-  WeatherFailure(this.Message);
+  WeatherFailure(this.message);
 
   @override
-  List<Object> get props => [Message];
+  List<Object> get props => [message];
 }
 
 class ServerFailure extends WeatherFailure {

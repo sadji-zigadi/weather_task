@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:weather_application_task/presnentation/bloc/weather_cubit.dart';
+import 'package:weather_application_task/presnentation/screens/weather_search_page.dart';
 
-void main() async {
+import 'injection_container.dart';
+
+Future<void> main() async {
+  setupLocator();
   await dotenv.load(fileName: ".env");
 
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,22 +19,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return BlocProvider(
+      create: (context) => locator<WeatherCubit>(),
+      child: MaterialApp(
+        title: 'Weather Application',
+        home: WeatherSearchPage(),
       ),
-      home: const MyHomePage(),
     );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }

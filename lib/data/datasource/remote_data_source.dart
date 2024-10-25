@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:weather_application_task/core/utils/constances.dart';
+import 'package:weather_application_task/core/utils/constants.dart';
 import 'package:weather_application_task/data/models/weater_models.dart';
 import 'package:http/http.dart' as http;
 import '../../core/error/exceptions.dart';
@@ -9,7 +9,7 @@ abstract class WeatherRemoteDataSource {
 }
 
 class WeatherRemoteDataSourceImpl implements WeatherRemoteDataSource {
-  WeatherRemoteDataSourceImpl(this.client);
+  WeatherRemoteDataSourceImpl({required this.client});
 
   final http.Client client;
 
