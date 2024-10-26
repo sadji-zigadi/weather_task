@@ -57,7 +57,7 @@ This project follows **clean architecture** principles to separate business logi
    - Weather details, including temperature & descriptions, are displayed.
    - UI is designed to be responsive using ScreenUtil, ensuring optimal viewing on various device sizes.
 
-### 4. **Error Handling**
+### 3. **Error Handling**
    - Ensures graceful error handling for network issues or API call failures, with messages displayed to the user.
 
 ## Additional Notes
